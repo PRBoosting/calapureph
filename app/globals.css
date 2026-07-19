@@ -26,8 +26,8 @@ img { object-fit:cover; }
 .headerOrder { padding:12px 22px; border:0; border-radius:999px; background:var(--green); color:#fff; font-size:11px; font-weight:800; cursor:pointer; }
 
 .hero { min-height:570px; position:relative; overflow:hidden; background:#f8f6ef; }
-.heroPhoto { z-index:0; object-fit:contain; object-position:right center; }
-.heroOverlay { position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.95) 36%,rgba(255,255,255,.45) 52%,rgba(255,255,255,0) 70%); }
+.heroPhoto { z-index:0; object-fit:contain; object-position:right center; -webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 13%,rgba(0,0,0,.22) 24%,#000 43%,#000 100%); mask-image:linear-gradient(90deg,transparent 0%,transparent 13%,rgba(0,0,0,.22) 24%,#000 43%,#000 100%); }
+.heroOverlay { position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.97) 34%,rgba(255,255,255,.62) 48%,rgba(255,255,255,.12) 65%,rgba(255,255,255,0) 76%); }
 .heroContent { width:min(570px,44vw); min-height:570px; position:relative; z-index:2; margin-left:clamp(28px,7vw,110px); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
 .eyebrow { margin:0 0 18px; color:var(--green); font-size:10px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
 h1,h2 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spacing:-.045em; }
@@ -54,11 +54,12 @@ h1,h2 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:400; 
 
 .benefitsSection { padding:clamp(76px,8vw,118px) clamp(24px,7vw,110px); background:var(--soft); }
 .centerHeading { max-width:780px; margin:0 auto 52px; text-align:center; }
+.benefitsIntro { max-width:620px; margin:22px auto 0; color:var(--muted); font-size:14px; font-style:italic; line-height:1.7; }
 .benefitCards { display:grid; grid-template-columns:repeat(4,1fr); max-width:1240px; margin:auto; border:1px solid var(--line); background:#fff; }
 .benefitCards article { min-height:260px; position:relative; padding:27px; border-right:1px solid var(--line); }
 .benefitCards article:last-child { border-right:0; }
 .benefitCards article>b { color:#a1aea3; font-size:10px; }
-.benefitCards article>i { width:62px; height:62px; display:grid; place-items:center; margin:28px 0 25px; border:1px solid #b8ceb9; border-radius:50%; color:var(--green); font:700 14px/1 Georgia,serif; }
+.benefitCards article>i { width:62px; height:62px; display:grid; place-items:center; margin:0 0 25px; border:1px solid #b8ceb9; border-radius:50%; background:#fbfdf8; font:normal 22px/1 sans-serif; }
 .benefitCards h3 { margin:0 0 10px; font:400 21px/1.15 Georgia,serif; }
 .benefitCards p { margin:0; color:var(--muted); font-size:12px; line-height:1.65; }
 
@@ -77,11 +78,16 @@ h1,h2 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:400; 
 .addButton { min-height:40px; padding:10px 18px; }
 .deliveryNote { margin:28px 0 0; color:#778078; text-align:center; font-size:11px; }
 
-.registrationStrip { padding:16px clamp(24px,8vw,125px); display:flex; align-items:center; justify-content:center; gap:32px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fbfcf8; }
-.registrationStrip>p { margin:0; color:#8b958c; font-size:9px; letter-spacing:.08em; text-transform:uppercase; }
-.registrationStrip>div { display:flex; align-items:center; gap:22px; }
-.registrationStrip span { display:flex; align-items:center; gap:7px; color:#526055; font-size:10px; font-weight:700; }
-.registrationStrip b { width:31px; height:31px; display:grid; place-items:center; border:1px solid #aac2ad; border-radius:50%; color:var(--green); font:700 10px/1 Georgia,serif; }
+.registrationStrip { min-height:78px; padding:12px clamp(24px,8vw,125px); display:flex; align-items:center; justify-content:center; gap:34px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fbfcf8; }
+.registrationStrip>p { margin:0; color:#8b958c; font-size:9px; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+.credentialList { display:flex; align-items:center; gap:28px; }
+.credentialItem { display:flex; align-items:center; gap:9px; }
+.credentialMark { width:40px; height:40px; display:grid; place-items:center; flex:0 0 auto; }
+.credentialMarkWide { width:58px; }
+.credentialMark img { width:100%; height:100%; display:block; object-fit:contain; }
+.credentialText { display:flex; align-items:flex-start; flex-direction:column; gap:2px; }
+.credentialText strong { color:#173d26; font-size:10px; letter-spacing:.08em; line-height:1; }
+.credentialText small { color:#526055; font-size:10px; font-weight:700; line-height:1.2; }
 .paymentBar { max-width:760px; margin:18px auto 0; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px; }
 .paymentBar span { padding:7px 11px; border:1px solid #dce5db; border-radius:999px; color:#46604c; background:#f8fbf7; font-size:9px; font-weight:800; }
 .paymentBar .paymentTitle { padding-left:0; border:0; background:transparent; color:#879087; letter-spacing:.1em; text-transform:uppercase; }
@@ -100,7 +106,7 @@ blockquote cite { color:#263629; font-size:11px; font-style:normal; font-weight:
 .ctaActions { flex:none; display:flex; align-items:center; gap:20px; }
 .lazadaTextLink { color:#fff; font-size:11px; font-weight:800; text-decoration:underline; text-underline-offset:4px; }
 
-footer { padding:70px clamp(24px,7vw,110px) 24px; display:grid; grid-template-columns:1.3fr repeat(4,1fr); gap:45px; background:#063b20; color:#c9d9cc; }
+footer { padding:70px clamp(24px,7vw,110px) 24px; display:grid; grid-template-columns:1.35fr repeat(3,minmax(0,1fr)); gap:clamp(28px,4vw,56px); background:#063b20; color:#c9d9cc; }
 .footerBrand { color:#fff; }
 .footerBrand em { color:#9dd466; }
 .footerBrandBlock>p { max-width:170px; margin:18px 0; color:#9cb29f; font-size:11px; line-height:1.6; }
@@ -161,7 +167,7 @@ footer small { grid-column:1/-1; padding-top:24px; border-top:1px solid rgba(255
   .benefitCards article:nth-child(-n+2) { border-bottom:1px solid var(--line); }
   .productCard { grid-template-columns:1fr; }
   .productPhoto { min-height:470px; }
-  footer { grid-template-columns:1.3fr repeat(2,1fr); }
+  footer { grid-template-columns:1.2fr repeat(3,minmax(0,1fr)); gap:28px; }
 }
 
 @media (max-width:780px) {
@@ -175,7 +181,7 @@ footer small { grid-column:1/-1; padding-top:24px; border-top:1px solid rgba(255
   .navLinks a::after { display:none; }
   .cartIcon>span { display:none; }
   .hero { min-height:780px; }
-  .heroPhoto { object-fit:contain; object-position:center bottom; }
+  .heroPhoto { object-fit:contain; object-position:center bottom; -webkit-mask-image:linear-gradient(180deg,transparent 0%,transparent 42%,rgba(0,0,0,.35) 52%,#000 66%,#000 100%); mask-image:linear-gradient(180deg,transparent 0%,transparent 42%,rgba(0,0,0,.35) 52%,#000 66%,#000 100%); }
   .heroOverlay { background:linear-gradient(180deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.96) 48%,rgba(255,255,255,.38) 68%,rgba(255,255,255,0) 88%); }
   .heroContent { width:auto; min-height:auto; margin:0; padding:70px 24px 0; }
   .hero h1 { font-size:57px; }
@@ -188,7 +194,7 @@ footer small { grid-column:1/-1; padding-top:24px; border-top:1px solid rgba(255
   .productPhoto { min-height:390px; }
   .ctaSection { flex-direction:column; align-items:flex-start; }
   .ctaActions { flex-wrap:wrap; }
-  footer { grid-template-columns:repeat(2,1fr); }
+  footer { grid-template-columns:repeat(3,minmax(0,1fr)); }
   .footerBrandBlock { grid-column:1/-1; }
   .orderModal form { grid-template-columns:1fr; }
   .orderModal label,.orderModal label:nth-of-type(3),.orderModal label:nth-of-type(4),.orderModal form .button { grid-column:1; }
@@ -203,10 +209,12 @@ footer small { grid-column:1/-1; padding-top:24px; border-top:1px solid rgba(255
   .productCard { grid-template-columns:1fr; }
   .productPhoto { min-height:420px; }
   .productDetails { padding:28px; }
-  .registrationStrip { align-items:flex-start; flex-direction:column; gap:10px; }
-  .registrationStrip>div { width:100%; justify-content:space-between; gap:8px; }
-  .registrationStrip span { gap:5px; font-size:9px; }
-  .registrationStrip b { width:27px; height:27px; font-size:9px; }
+  .registrationStrip { align-items:flex-start; flex-direction:column; gap:10px; padding-block:16px; }
+  .credentialList { width:100%; justify-content:space-between; gap:10px; }
+  .credentialItem { gap:6px; }
+  .credentialMark { width:32px; height:32px; }
+  .credentialMarkWide { width:46px; }
+  .credentialText strong,.credentialText small { font-size:9px; }
   .paymentBar { justify-content:flex-start; }
   footer { grid-template-columns:1fr; }
   .footerBrandBlock,footer small { grid-column:1; }

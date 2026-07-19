@@ -137,6 +137,24 @@ export default function Home() {
         </div>
       </section>
 
+      <aside className="registrationStrip" aria-label="CalaPure business credentials">
+        <p>Client-supplied registration details</p>
+        <div className="credentialList">
+          <div className="credentialItem">
+            <span className="credentialMark"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/DTI_PH_new_logo.svg" alt="Department of Trade and Industry logo" /></span>
+            <span className="credentialText"><strong>DTI</strong><small>Registered</small></span>
+          </div>
+          <div className="credentialItem">
+            <span className="credentialMark"><img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Bureau_of_Internal_Revenue_%28BIR%29.svg" alt="Bureau of Internal Revenue logo" /></span>
+            <span className="credentialText"><strong>BIR</strong><small>Registered</small></span>
+          </div>
+          <div className="credentialItem">
+            <span className="credentialMark credentialMarkWide"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Food_and_Drug_Administration_%28FDA%29_Philippines.svg" alt="Food and Drug Administration Philippines logo" /></span>
+            <span className="credentialText"><strong>FDA</strong><small>Approved</small></span>
+          </div>
+        </div>
+      </aside>
+
       <section className="aboutSection" id="about">
         <div className="aboutCopy">
           <p className="eyebrow">Welcome to CalaPure</p>
@@ -155,21 +173,17 @@ export default function Home() {
         </div>
       </section>
 
-      <aside className="registrationStrip" aria-label="CalaPure business credentials">
-        <p>Client-supplied registration details</p>
-        <div><span><b>DTI</b> Registered</span><span><b>BIR</b> Registered</span><span><b>FDA</b> Approved</span></div>
-      </aside>
-
       <section className="benefitsSection" id="benefits">
         <div className="centerHeading">
-          <p className="eyebrow">Why CalaPure</p>
-          <h2>Simple ingredients.<br /><span>Bright possibilities.</span></h2>
+          <p className="eyebrow">Naturally better, every day</p>
+          <h2>Why Choose <span>CalaPure</span></h2>
+          <p className="benefitsIntro">Made from real calamansi and crafted for convenience, freshness, and everyday use.</p>
         </div>
         <div className="benefitCards">
-          <article><b>01</b><i>100%</i><h3>Pure calamansi</h3><p>Real calamansi character, with its naturally bright, tart citrus flavor.</p></article>
-          <article><b>02</b><i>Mix</i><h3>Made to refresh</h3><p>Stir into cold water, iced tea, or honey for a refreshing everyday drink.</p></article>
-          <article><b>03</b><i>Cook</i><h3>Kitchen versatile</h3><p>Use in marinades, sauces, dressings, seafood, pancit, and sawsawan.</p></article>
-          <article><b>04</b><i>Easy</i><h3>Ready when you are</h3><p>No squeezing required. Shake, pour, and refrigerate after opening.</p></article>
+          <article><i aria-hidden="true">🌿</i><h3>100% Pure Calamansi</h3><p>Freshly extracted with no artificial citrus taste.</p></article>
+          <article><i aria-hidden="true">🍹</i><h3>Refreshing Anytime</h3><p>Perfect for cold water, tea, juice, or healthy drinks.</p></article>
+          <article><i aria-hidden="true">🍽️</i><h3>Perfect for Cooking</h3><p>Ideal for marinades, seafood, sauces, dressings, and Filipino dishes.</p></article>
+          <article><i aria-hidden="true">⏱️</i><h3>Ready to Use</h3><p>No squeezing, no mess—just pour, mix, and enjoy.</p></article>
         </div>
       </section>
 
@@ -201,7 +215,7 @@ export default function Home() {
       <section className="reviewsSection" id="reviews">
         <div className="centerHeading">
           <p className="eyebrow">What our customers say</p>
-          <h2>Real People. <span>Real Reviews.</span></h2>
+          <h2>Pure Goodness. <span>Genuine Stories.</span></h2>
         </div>
         <div className="reviewGrid">
           <blockquote><div aria-label="5 stars">★★★★★</div><p>"Masarap, natural, and very effective sa ubo at sipon. Our whole family loves CalaPure!"</p><cite>- Maria T.</cite></blockquote>
@@ -225,7 +239,6 @@ export default function Home() {
           <div className="socials"><a href="https://www.facebook.com/Calapureph" target="_blank" rel="noreferrer">Facebook</a><span>Instagram</span><span>TikTok</span></div>
         </div>
         <div className="footerColumn"><h3>Quick links</h3><a href="#top">Home</a><a href="#about">About us</a><a href="#benefits">Benefits</a><a href="#products">Products</a><a href="https://s.lazada.com.ph/s.ZTCBl5" target="_blank" rel="noreferrer">Shop on Lazada</a></div>
-        <div className="footerColumn"><h3>Customer service</h3><span>Ordering by SMS</span><span>Delivery confirmation</span><span>Product care</span><span>Terms & conditions</span></div>
         <div className="footerColumn"><h3>Contact us</h3><a href="tel:+639774203854">0977 420 3854</a><a href="https://www.facebook.com/Calapureph" target="_blank" rel="noreferrer">@Calapureph</a><span>Philippines</span></div>
         <div className="footerColumn"><h3>We deliver</h3><p>Enjoy CalaPure delivered to your area. Availability and fees are confirmed with every order.</p></div>
         <small>Copyright 2026 CalaPure. All rights reserved.</small>

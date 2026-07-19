@@ -5,11 +5,14 @@ A responsive CalaPure online storefront built with Next.js and prepared for GitH
 ## Features
 
 - Responsive desktop and mobile design
+- Blended CalaPure product hero presentation
 - CalaPure product gallery and pricing
 - Shopping cart and SMS order flow
-- DTI, BIR, and FDA information supplied by CalaPure
+- Compact DTI, BIR, and FDA credential strip using client-supplied status information
+- Updated "Why Choose CalaPure" benefits section
 - GCash, Maya, bank transfer, and cash-on-delivery payment information
 - Lazada checkout link
+- Streamlined responsive footer
 
 ## Run locally
 

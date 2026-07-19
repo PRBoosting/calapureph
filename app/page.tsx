@@ -126,9 +126,9 @@ export default function Home() {
           <h1>Pure. Natural.<br />Cala<span>Pure.</span></h1>
           <p>Fresh Philippine calamansi in a bottle, ready for refreshing drinks, cooking, marinades, sauces, and everyday goodness.</p>
           <div className="heroBenefits" aria-label="CalaPure highlights">
-            <div><b>100%</b><span>Natural</span></div>
-            <div><b>0</b><span>Preservatives</span></div>
-            <div><b>C</b><span>Vitamin C</span></div>
+            <div><b className="heroBenefitIcon leafIcon" aria-hidden="true" /><span>100% Natural</span></div>
+            <div><b className="heroBenefitIcon checkIcon" aria-hidden="true">✓</b><span>No Preservatives</span></div>
+            <div><b className="heroBenefitIcon vitaminIcon" aria-hidden="true">C<sup>+</sup></b><span>Rich in Vitamin C</span></div>
           </div>
           <div className="heroActions">
             <a className="button primary" href="#products">Shop now <span aria-hidden="true">-&gt;</span></a>
@@ -138,7 +138,6 @@ export default function Home() {
       </section>
 
       <aside className="registrationStrip" aria-label="CalaPure business credentials">
-        <p>Client-supplied registration details</p>
         <div className="credentialList">
           <div className="credentialItem">
             <span className="credentialMark"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/DTI_PH_new_logo.svg" alt="Department of Trade and Industry logo" /></span>
@@ -218,9 +217,9 @@ export default function Home() {
           <h2>Pure Goodness. <span>Genuine Stories.</span></h2>
         </div>
         <div className="reviewGrid">
-          <blockquote><div aria-label="5 stars">★★★★★</div><p>"Masarap, natural, and very effective sa ubo at sipon. Our whole family loves CalaPure!"</p><cite>- Maria T.</cite></blockquote>
-          <blockquote><div aria-label="5 stars">★★★★★</div><p>"My daily immune booster. Sobrang refreshing and healthy."</p><cite>- John D.</cite></blockquote>
-          <blockquote><div aria-label="5 stars">★★★★★</div><p>"I love the combination of calamansi, ginger, and honey. Perfect for chilly mornings."</p><cite>- Anna L.</cite></blockquote>
+          <blockquote><div aria-label="Customer recommends CalaPure">✓ Recommended</div><p>"Di na need magpiga ng napakaraming calamansi. Pure Calamansi na sya. Rekta timpla na tas haluan ng honey. Ginagamit din namin pang marinade. Very useful ang Calapure 👍"</p><cite>— Ken Elorde</cite></blockquote>
+          <blockquote><div aria-label="Customer recommends CalaPure">✓ Recommended</div><p>"Strong, authentic calamansi taste — just like squeezing fresh fruit, but much more convenient."</p><cite>— Inday Pia</cite></blockquote>
+          <blockquote><div aria-label="Customer recommends CalaPure">✓ Recommended</div><p>"We just tried CalaPure today, and we already love how convenient it is! 🍊 No more slicing and squeezing calamansi—it’s ready to use anytime. The taste is fresh and natural, perfect for drinks and everyday use. Highly recommended for busy moms like me! Thank you, CalaPure! 💚"</p><cite>— Ricalynne Gregorio Narciso</cite></blockquote>
         </div>
       </section>
 
@@ -236,7 +235,10 @@ export default function Home() {
         <div className="footerBrandBlock">
           <a className="brand footerBrand" href="#top"><span className="brandFruit" aria-hidden="true"><i /><b /></span><span>Cala</span><em>Pure</em></a>
           <p>All natural. All good. All for you.</p>
-          <div className="socials"><a href="https://www.facebook.com/Calapureph" target="_blank" rel="noreferrer">Facebook</a><span>Instagram</span><span>TikTok</span></div>
+          <div className="socials">
+            <a className="socialFacebook" href="https://www.facebook.com/Calapureph" target="_blank" rel="noreferrer">Visit Facebook <span aria-hidden="true">→</span></a>
+            <a className="socialLazada" href="https://s.lazada.com.ph/s.ZTCBl5" target="_blank" rel="noreferrer">Shop on Lazada <span aria-hidden="true">→</span></a>
+          </div>
         </div>
         <div className="footerColumn"><h3>Quick links</h3><a href="#top">Home</a><a href="#about">About us</a><a href="#benefits">Benefits</a><a href="#products">Products</a><a href="https://s.lazada.com.ph/s.ZTCBl5" target="_blank" rel="noreferrer">Shop on Lazada</a></div>
         <div className="footerColumn"><h3>Contact us</h3><a href="tel:+639774203854">0977 420 3854</a><a href="https://www.facebook.com/Calapureph" target="_blank" rel="noreferrer">@Calapureph</a><span>Philippines</span></div>

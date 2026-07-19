@@ -34,10 +34,14 @@ h1,h2 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:400; 
 .hero h1 { font-size:clamp(54px,5.3vw,80px); line-height:.93; color:#121712; }
 .hero h1 span,.aboutCopy h2 span,.centerHeading h2 span { color:var(--green); font-style:italic; }
 .heroContent>p:not(.eyebrow) { max-width:470px; margin:24px 0 0; color:#576158; font-size:15px; line-height:1.65; }
-.heroBenefits { display:flex; gap:28px; margin-top:28px; }
-.heroBenefits div { min-width:74px; padding-top:13px; border-top:1px solid #b9c7ba; display:flex; flex-direction:column; gap:3px; }
-.heroBenefits b { color:var(--green); font:700 18px/1 Georgia,serif; }
-.heroBenefits span { color:#5f6961; font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+.heroBenefits { display:flex; gap:18px; margin-top:28px; }
+.heroBenefits div { width:104px; display:flex; align-items:center; flex-direction:column; gap:9px; text-align:center; }
+.heroBenefitIcon { width:46px; height:46px; position:relative; display:grid; place-items:center; border:1px solid #a9c3ad; border-radius:50%; background:rgba(255,255,255,.72); color:var(--green); font:700 17px/1 Georgia,serif; box-shadow:0 5px 15px rgba(24,85,48,.07); }
+.heroBenefitIcon sup { margin-left:1px; font:700 9px/1 Arial,sans-serif; }
+.leafIcon::before { content:""; width:14px; height:20px; border:2px solid var(--green); border-radius:100% 0 100% 0; transform:rotate(-38deg); }
+.leafIcon::after { content:""; width:10px; height:1px; position:absolute; left:22px; top:25px; background:var(--green); transform:rotate(-43deg); transform-origin:left center; }
+.checkIcon { font-family:Arial,sans-serif; font-size:19px; }
+.heroBenefits span { color:#4f5e52; font-size:8px; font-weight:800; line-height:1.35; text-transform:uppercase; letter-spacing:.07em; }
 .heroActions { display:flex; align-items:center; gap:24px; margin-top:30px; }
 .button { min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:12px 21px; border:1px solid var(--green); border-radius:999px; background:transparent; color:var(--green); font-size:11px; font-weight:800; cursor:pointer; transition:.2s; }
 .button:hover { transform:translateY(-2px); }
@@ -78,9 +82,8 @@ h1,h2 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:400; 
 .addButton { min-height:40px; padding:10px 18px; }
 .deliveryNote { margin:28px 0 0; color:#778078; text-align:center; font-size:11px; }
 
-.registrationStrip { min-height:78px; padding:12px clamp(24px,8vw,125px); display:flex; align-items:center; justify-content:center; gap:34px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fbfcf8; }
-.registrationStrip>p { margin:0; color:#8b958c; font-size:9px; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
-.credentialList { display:flex; align-items:center; gap:28px; }
+.registrationStrip { min-height:78px; padding:12px clamp(24px,7vw,110px); display:flex; align-items:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fbfcf8; }
+.credentialList { width:55%; margin-left:auto; display:flex; align-items:center; justify-content:center; gap:28px; }
 .credentialItem { display:flex; align-items:center; gap:9px; }
 .credentialMark { width:40px; height:40px; display:grid; place-items:center; flex:0 0 auto; }
 .credentialMarkWide { width:58px; }
@@ -95,7 +98,7 @@ h1,h2 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:400; 
 .reviewsSection { padding:clamp(76px,8vw,110px) clamp(24px,8vw,120px); background:#f6f7f2; }
 .reviewGrid { max-width:1120px; margin:auto; display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
 blockquote { margin:0; min-height:220px; padding:30px; display:flex; flex-direction:column; justify-content:center; background:#fff; border:1px solid #e8ece6; }
-blockquote div { color:var(--gold); letter-spacing:.12em; font-size:14px; }
+blockquote div { color:var(--green); letter-spacing:.1em; font-size:9px; font-weight:800; text-transform:uppercase; }
 blockquote p { margin:22px 0; color:#4f5950; font:400 14px/1.65 Georgia,serif; }
 blockquote cite { color:#263629; font-size:11px; font-style:normal; font-weight:800; }
 
@@ -110,7 +113,10 @@ footer { padding:70px clamp(24px,7vw,110px) 24px; display:grid; grid-template-co
 .footerBrand { color:#fff; }
 .footerBrand em { color:#9dd466; }
 .footerBrandBlock>p { max-width:170px; margin:18px 0; color:#9cb29f; font-size:11px; line-height:1.6; }
-.socials { display:flex; flex-direction:column; gap:6px; font-size:10px; }
+.socials { display:flex; align-items:flex-start; flex-direction:column; gap:8px; }
+.socials a { min-width:150px; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:9px 12px; border:1px solid rgba(255,255,255,.22); border-radius:999px; color:#eef6f0; font-size:9px; font-weight:800; transition:.2s; }
+.socials a:hover { transform:translateX(3px); border-color:rgba(255,255,255,.5); }
+.socials .socialLazada { border-color:#ff8d57; background:#ef6b2e; color:#fff; }
 .footerColumn { display:flex; flex-direction:column; gap:9px; }
 .footerColumn h3 { margin:0 0 7px; color:#fff; font-size:11px; }
 .footerColumn a,.footerColumn span,.footerColumn p { margin:0; color:#9fb6a3; font-size:10px; line-height:1.55; }
@@ -192,6 +198,8 @@ footer small { grid-column:1/-1; padding-top:24px; border-top:1px solid rgba(255
   .benefitCards article { border-right:0; border-bottom:1px solid var(--line); }
   .productCard { grid-template-columns:1fr 1fr; min-height:390px; }
   .productPhoto { min-height:390px; }
+  .registrationStrip { padding:14px 22px; }
+  .credentialList { width:100%; margin-left:0; }
   .ctaSection { flex-direction:column; align-items:flex-start; }
   .ctaActions { flex-wrap:wrap; }
   footer { grid-template-columns:repeat(3,minmax(0,1fr)); }
@@ -203,13 +211,16 @@ footer small { grid-column:1/-1; padding-top:24px; border-top:1px solid rgba(255
 @media (max-width:520px) {
   .hero { min-height:720px; }
   .hero h1 { font-size:48px; }
-  .heroBenefits { gap:15px; }
+  .heroBenefits { width:100%; justify-content:space-between; gap:8px; }
+  .heroBenefits div { width:84px; }
+  .heroBenefitIcon { width:40px; height:40px; }
+  .heroBenefits span { font-size:7px; }
   .heroActions { align-items:flex-start; flex-direction:column; gap:10px; }
   .aboutPhoto { min-height:320px; border-radius:16px; }
   .productCard { grid-template-columns:1fr; }
   .productPhoto { min-height:420px; }
   .productDetails { padding:28px; }
-  .registrationStrip { align-items:flex-start; flex-direction:column; gap:10px; padding-block:16px; }
+  .registrationStrip { padding-block:16px; }
   .credentialList { width:100%; justify-content:space-between; gap:10px; }
   .credentialItem { gap:6px; }
   .credentialMark { width:32px; height:32px; }

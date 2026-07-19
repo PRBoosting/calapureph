@@ -35,7 +35,7 @@ npm.cmd run build
 2. Upload the contents of this folder to the repository root.
 3. In Netlify, select **Add new project → Import an existing project**.
 4. Select the GitHub repository.
-5. Use `npm run build` as the build command and leave the publish directory blank.
+5. Use `npm run build` as the build command and `out` as the publish directory.
 6. Deploy the site.
 
-The included `netlify.toml` selects Node.js 22 and the correct build command.
+The included `netlify.toml` selects Node.js 22, runs the production build, and publishes the generated `out` folder.

@@ -16,6 +16,8 @@ img { object-fit:cover; }
 .brandFruit i,.brandFruit b { position:absolute; border-radius:50%; }
 .brandFruit i { width:15px; height:15px; left:9px; top:5px; background:#f2b92c; border:2px solid #fff; box-shadow:0 0 0 1px #d89a0a; }
 .brandFruit b { width:13px; height:7px; left:1px; top:1px; border-radius:100% 0 100% 0; background:#33823f; transform:rotate(25deg); }
+.brandLogo { width:64px; height:64px; flex:none; align-items:center; overflow:hidden; border-radius:50%; }
+.brandLogo img { width:100%; height:100%; display:block; object-fit:cover; border-radius:50%; mix-blend-mode:multiply; }
 .navLinks { margin-left:auto; display:flex; align-items:center; gap:28px; font-size:12px; font-weight:700; }
 .navLinks a { padding:30px 0 26px; position:relative; }
 .navLinks a::after { content:""; position:absolute; left:50%; right:50%; bottom:16px; height:1px; background:var(--green); transition:.25s; }
@@ -110,8 +112,8 @@ blockquote cite { color:#263629; font-size:11px; font-style:normal; font-weight:
 .lazadaTextLink { color:#fff; font-size:11px; font-weight:800; text-decoration:underline; text-underline-offset:4px; }
 
 footer { padding:70px clamp(24px,7vw,110px) 24px; display:grid; grid-template-columns:1.35fr repeat(3,minmax(0,1fr)); gap:clamp(28px,4vw,56px); background:#063b20; color:#c9d9cc; }
-.footerBrand { color:#fff; }
-.footerBrand em { color:#9dd466; }
+.footerBrand { width:126px; height:126px; padding:6px; background:#f5f5f0; box-shadow:0 14px 34px rgba(0,0,0,.16); }
+.footerBrand img { mix-blend-mode:multiply; }
 .footerBrandBlock>p { max-width:170px; margin:18px 0; color:#9cb29f; font-size:11px; line-height:1.6; }
 .socials { display:flex; align-items:flex-start; flex-direction:column; gap:8px; }
 .socials a { min-width:150px; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:9px 12px; border:1px solid rgba(255,255,255,.22); border-radius:999px; color:#eef6f0; font-size:9px; font-weight:800; transition:.2s; }
@@ -179,6 +181,7 @@ footer small { grid-column:1/-1; padding-top:24px; border-top:1px solid rgba(255
 @media (max-width:780px) {
   .siteHeader { height:70px; padding:0 20px; }
   .brand { font-size:27px; }
+  .brandLogo { width:56px; height:56px; }
   .menuButton { width:38px; height:38px; margin-left:auto; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; border:0; background:#fff; }
   .menuButton span { width:19px; height:2px; background:var(--green); }
   .navLinks { position:absolute; top:69px; left:0; right:0; display:none; flex-direction:column; align-items:stretch; gap:0; padding:14px 20px 22px; background:#fff; border-bottom:1px solid var(--line); }
@@ -209,6 +212,7 @@ footer small { grid-column:1/-1; padding-top:24px; border-top:1px solid rgba(255
 }
 
 @media (max-width:520px) {
+  .footerBrand { width:112px; height:112px; }
   .hero { min-height:720px; }
   .hero h1 { font-size:48px; }
   .heroBenefits { width:100%; justify-content:space-between; gap:8px; }

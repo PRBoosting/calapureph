@@ -97,9 +97,8 @@ export default function Home() {
   return (
     <main id="top">
       <header className="siteHeader">
-        <a className="brand" href="#top" aria-label="CalaPure home">
-          <span className="brandFruit" aria-hidden="true"><i /><b /></span>
-          <span>Cala</span><em>Pure</em>
+        <a className="brand brandLogo" href="#top" aria-label="CalaPure home">
+          <Image src="/brand/calapure-logo-source.png" alt="CalaPure — all natural pure calamansi extract" width={1256} height={1252} priority />
         </a>
         <button className="menuButton" type="button" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           <span /><span />
@@ -233,7 +232,7 @@ export default function Home() {
 
       <footer>
         <div className="footerBrandBlock">
-          <a className="brand footerBrand" href="#top"><span className="brandFruit" aria-hidden="true"><i /><b /></span><span>Cala</span><em>Pure</em></a>
+          <a className="brand footerBrand brandLogo" href="#top" aria-label="CalaPure home"><Image src="/brand/calapure-logo-source.png" alt="CalaPure — all natural pure calamansi extract" width={1256} height={1252} /></a>
           <p>All natural. All good. All for you.</p>
           <div className="socials">
             <a className="socialFacebook" href="https://www.facebook.com/Calapureph" target="_blank" rel="noreferrer">Visit Facebook <span aria-hidden="true">→</span></a>

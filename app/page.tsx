@@ -27,7 +27,7 @@ const products: Product[] = [
     id: "honey-ginger-tea",
     name: "Honey Calamansi Ginger Tea",
     shortName: "Honey Ginger Tea",
-    price: 280,
+    price: 250,
     size: "500 ml",
     image: "/products/calapure-tea-catalog.png",
     description: "Calamansi and ginger blended with cultured honey for a comforting hot or iced drink.",
